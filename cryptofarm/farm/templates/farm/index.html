@@ -1,0 +1,31 @@
+{% extends "farm/layout.html" %}
+{% load static %}
+
+{% block body %}
+
+  {% if user.is_authenticated %}
+  <div id="wallet">
+    <h3>Wallet</h3>
+  </div>
+
+  <div id="main">
+    <h3>MAIN VIEW</h3>
+      <div id="blockchain">
+        Blockchain
+      </div>
+      <div id=myfarm>
+        My Farm
+      </div>
+  </div>
+  
+  <div id="market">
+    <h3>Market</h3>
+  </div>
+  {% endif %}
+
+{% endblock %}
+
+{% block script %}
+  <script type="text/babel" src="{% static 'farm/farm_bab.js' %}"></script>
+  <script type="text/javascript" src="{% static 'farm/farm_js.js' %}"></script>
+{% endblock %}
